@@ -1,0 +1,3 @@
+state is maintained using phone number as partition key (primary key) in a new dynamoDB table. ie, a user is identified by his/her phone number
+in LF1, in case of "DiningSuggestionIntent" each unique user's request is logged in the dynamoDB table 'user-recent-request'
+in LF1 itself, in case of "userHistory", if user has requested suggestion in the past (ie, the user's request is present in dynamoDB table 'user-recent-request') , his previous conversation will be used to send him/her suggestion.

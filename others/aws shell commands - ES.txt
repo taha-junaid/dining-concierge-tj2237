@@ -1,0 +1,20 @@
+Index creation:
+--------------
+curl -u master_username:master_password -X PUT "<ES_URL>/<ES_INDEX>?pretty"
+
+curl -u <my_username>:<my_pass> -X PUT "https://search-restaurants-index-xxxxxxxx.us-east-1.es.amazonaws.com/restaurants?pretty"                       
+{
+  "acknowledged" : true,
+  "shards_acknowledged" : true,
+  "index" : "restaurants"
+}[cloudshell-user@ip-10-4-64-8 ~]$ 
+
+
+
+Bulk Loading of Data:
+---------------------
+curl -XPUT -u 'master_username:master_password' '<ES_URL>/<ES_INDEX>/_bulk?pretty' --data-binary @/path/to/json/data/file/<file-name>.json -H 'Content-Type: application/json'
+
+curl -XPUT -u <my_username>:<my_pass> 'https://search-restaurants-index-xxxxxxxx.us-east-1.es.amazonaws.com/restaurants/_bulk?pretty' --data-binary @<(aws s3 cp s3://yelp-restaurants-123/restaurants-data.ndjson -) -H 'Content-Type: application/json'
+
+
