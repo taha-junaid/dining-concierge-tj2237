@@ -2,7 +2,7 @@
 A micro service based cloud project utilizing several AWS services like LexV2, S3, Lambda, API Gateway, SQS, DynamoDB, ElasticSearch and SES.
 
 Link to working chatbot:
-https://s3.console.aws.amazon.com/s3/buckets/tj2237-clouds23-diningconcierge?region=us-east-2  
+http://tj2237-clouds23-diningconcierge.s3-website.us-east-2.amazonaws.com/
 
 ### Implemented:
 - **Greeting Intent** (sample prompts: 'Hi!' / 'Hey')  
